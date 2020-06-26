@@ -1,7 +1,7 @@
 ## Setup Instructions
-**Clone** this repository.
-**Run** `cd /path/to/dir` into the root of this repository.
-**Move** `.env.sample` to `.env`
+**Clone** this repository. \
+**Run** `cd /path/to/dir` into the root of this repository. \
+**Move** `.env.sample` to `.env` \
 **Edit** following details in `.env` file:
 
  - `PORT`: *Port to run this server on.*
@@ -16,13 +16,13 @@
 **Run** npm start to run your server.
 
 ## Creating Profiles
-**Click** on `User Profiles` from the navbar.
-**Enter** contact info in `New Profile` form and then click `[Create Profile]`
+**Click** on `User Profiles` from the navbar. \
+**Enter** contact info in `New Profile` form and then click `[Create Profile]` \
 
 ## Updating Preferences
-**Click** the name of the person you would like to edit preferenes for.
-**Set** preferences for `SMS`, `Email` and `Voice`.
-**Click** `[Update Preferences]` 
+**Click** the name of the person you would like to edit preferenes for. \
+**Set** preferences for `SMS`, `Email` and `Voice`. \
+**Click** `[Update Preferences]`  \
 
 ## Sending Notifications
 **Make** a HTTP `POST` request to `/notification/send/{profile_id}` with
