@@ -46,6 +46,13 @@ module.exports = function() {
                           console.log(e);
                         });
       return Self.objectify(profile);
+    },
+    delete: async function(index) {
+      await TwilioSyncList
+        .syncListItems(index)
+        .remove()
+        .catch(function(e) { console.log(e); });
+      return true;
     }
   };
 

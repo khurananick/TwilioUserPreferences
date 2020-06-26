@@ -26,6 +26,12 @@ module.exports = function(router) {
     res.send(body);
   });
 
+  router.delete("/profile/:id", async function(req, res) {
+    const profile = await ProfileModel.delete(req.params.id);
+    const body = profile ? {success:true} : {error: true}
+    res.send(body);
+  });
+
   router.get("/profile/:id/preferences", async function(req, res) {
     const profile = await ProfileModel.find(req.params.id); // get profiles from db.
     res.render("preferences", { profile: profile, NotificationTypes: NotificationTypes });
