@@ -12,6 +12,14 @@ module.exports = function(router) {
     res.send(body);
   });
 
+  router.post("/profiles/create/redirect", async function(req, res) {
+    if(!req.body.email && !req.body.phone)
+      return res.send({ error: "Email Address and Phone Number are required." });
+    const profile = await ProfileModel.create(req.body);
+    const body = profile ? {success:true} : {error: true}
+    res.redirect(`/profiles`)
+  });
+
   router.get("/profile/:id", async function(req, res) {
     const profile = await ProfileModel.find(req.params.id); // get profiles from db.
     const body = profile ? profile : {};

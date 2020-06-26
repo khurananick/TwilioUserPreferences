@@ -51,6 +51,7 @@ block content
           url: `/profile/${profile.id}/preferences`,
           data: prefs
         }).done(function(resp) {
+          alert("Saved!");
           console.log(resp);
         });
         console.log(prefs);

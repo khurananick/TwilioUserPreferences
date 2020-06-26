@@ -9,3 +9,22 @@ block content
         for profile in profiles
           li.list-group-item
             a(href=`/profile/${profile.id}/preferences` target="_blank") #{profile.first_name} #{profile.last_name}
+      hr
+      h4 New Profile
+      div(class="row")
+        div(class="col-md-12")
+          form(method="post" action="/profiles/create/redirect")
+            div(class="row")
+              div(class="col-md-2")
+                div(class="form-group")
+                  input(class="form-control" name="first_name" placeholder="John")
+              div(class="col-md-2")
+                div(class="form-group")
+                  input(class="form-control" name="last_name" placeholder="Jones")
+              div(class="col-md-4")
+                  input(class="form-control" name="phone" placeholder="+19085554444")
+              div(class="col-md-4")
+                  input(class="form-control" name="email" placeholder="john.jones@gmail.com")
+            div(class="row")
+              div(class="col-md-12")
+                button(type="submit") Create Profile
