@@ -1,0 +1,11 @@
+extend layout
+block content
+  div(class="row")
+    div(class="col-md-12")
+      h3(id="users")
+        strong Profiles
+      hr
+      ul.list-group
+        for profile in profiles
+          li.list-group-item
+            a(href=`/profile/${profile.id}/preferences` target="_blank") #{profile.first_name} #{profile.last_name}

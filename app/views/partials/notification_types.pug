@@ -1,0 +1,8 @@
+mixin notification_types(NotificationTypes, namespace, prefs)
+  div(class="row")
+    for type in NotificationTypes
+      - checked = prefs ? ( prefs[type] ? ( prefs[type][namespace] ? 'checked' : undefined) : undefined) : undefined
+      div(class="col-sm-4")
+        label
+          input(type="checkbox" data-namespace=namespace value=type checked=checked)
+          |  #{type.split("_").join(" ").replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()})}

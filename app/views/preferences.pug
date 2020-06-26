@@ -1,0 +1,59 @@
+extend layout_external
+include partials/notification_types
+block content
+  div(class="row")
+    div(class="col-md-12")
+      h2(id="")
+        strong Notification Preferences
+      h4 For #{profile.first_name} #{profile.last_name}
+      hr
+      div(class="panel panel-default")
+        div(class="panel-body")
+          h4
+            b SMS Notifications
+          hr
+          div(class="row")
+            div(class="col-md-12")
+              +notification_types(NotificationTypes, "sms", profile.notification_preferences)
+      div(class="panel panel-default")
+        div(class="panel-body")
+          h4
+            b Email Notifications
+          hr
+          div(class="row")
+            div(class="col-md-12")
+              +notification_types(NotificationTypes, "email", profile.notification_preferences)
+      div(class="panel panel-default")
+        div(class="panel-body")
+          h4
+            b Voice Notifications
+          hr
+          div(class="row")
+            div(class="col-md-12")
+              +notification_types(NotificationTypes, "voice", profile.notification_preferences)
+      hr
+      div(class="text-center")
+        button(id="save" class="btn btn-primary") Update Preferences
+  script.
+    const profile = !{JSON.stringify(profile)};
+    $(function() {
+      $("#save").on("click", function() {
+        const prefs = {};
+        $("input[type='checkbox']").each(function(index, element) {
+          if(element.checked) {
+            if(!prefs[element.value])
+              prefs[element.value] = {};
+            prefs[element.value][element.dataset.namespace] = true;
+          }
+        });
+        $.ajax({
+          method: "POST",
+          url: `/profile/${profile.id}/preferences`,
+          data: prefs
+        }).done(function(resp) {
+          console.log(resp);
+        });
+        console.log(prefs);
+        console.log(profile);
+      });
+    });
