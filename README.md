@@ -1,3 +1,6 @@
+**Please note this is not an official Twilio supported application.** \
+**This application does not come with any warranties. You may use this application at your own risk.** 
+
 ## Setup Instructions
 **Clone** this repository. \
 **Run** `cd /path/to/dir` into the root of this repository. \
