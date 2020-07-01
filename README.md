@@ -16,7 +16,7 @@
  - `FROM_NUMBER`: *Use the number from your Twilio account*
  - `FROM_EMAIL`: *The email address you want your emails to be sent from*
 
-**Run** npm start to run your server.
+**Run** `npm start` to run your server.
 
 ## Creating Profiles
 **Click** on `User Profiles` from the navbar. \
