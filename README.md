@@ -30,7 +30,6 @@
 <p><img src="./static/screenshots/2_Set_Preferences.png?raw=true" width="650px" /></p>
 
 ## Sending Notifications
-<p><img src="./static/screenshots/3_Send_Notification.png?raw=true" width="650px" /></p>
 **Make** a HTTP `POST` request to `/notification/send/{profile_id}` with
 - `type` of notification:
     - `Options:` 
@@ -44,6 +43,8 @@
     - *There is a new message from your healthcare team*
 
 - `subject` of message (only for email)
+
+<p><img src="./static/screenshots/3_Send_Notification.png?raw=true" width="650px" /></p>
 
 ### Sample HTTP Notification (curl)
     curl --location --request POST 'http://localhost:8081/notification/send/35' \
