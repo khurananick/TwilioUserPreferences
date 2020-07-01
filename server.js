@@ -60,6 +60,7 @@ httpApp.use('/', router);
 
 // Load models and controllers.
 ProfileModel = require('./app/models/profile.js')();
+NotificationModel = require('./app/models/notification.js')();
 require("./app/controllers/index")(router);
 require("./app/controllers/profiles")(router);
 require("./app/controllers/notifications")(router);
