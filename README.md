@@ -16,16 +16,18 @@
  - `FROM_NUMBER`: *Use the number from your Twilio account*
  - `FROM_EMAIL`: *The email address you want your emails to be sent from*
 
-**Run** npm start to run your server.
+**Run** `npm start` to run your server.
 
 ## Creating Profiles
 **Click** on `User Profiles` from the navbar. \
 **Enter** contact info in `New Profile` form and then click `[Create Profile]` \
+<p><img src="./static/screenshots/1_Create_Profile.png?raw=true" width="650px" /></p>
 
 ## Updating Preferences
 **Click** the name of the person you would like to edit preferenes for. \
 **Set** preferences for `SMS`, `Email` and `Voice`. \
 **Click** `[Update Preferences]`  \
+<p><img src="./static/screenshots/2_Set_Preferences.png?raw=true" width="650px" /></p>
 
 ## Sending Notifications
 **Make** a HTTP `POST` request to `/notification/send/{profile_id}` with
@@ -41,6 +43,8 @@
     - *There is a new message from your healthcare team*
 
 - `subject` of message (only for email)
+
+<p><img src="./static/screenshots/3_Send_Notification.png?raw=true" width="650px" /></p>
 
 ### Sample HTTP Notification (curl)
     curl --location --request POST 'http://localhost:8081/notification/send/35' \
