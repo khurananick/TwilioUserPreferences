@@ -26,7 +26,7 @@
     "path": "0.12.7",
     "pug": "2.0.4",
     "request": "2.88.2",
-    "socket.io": "2.3.0",
+    "socket.io": "2.4.0",
     "supertest": "4.0.2",
     "twilio": "3.40.0",
     "twilio-chat": "3.3.4",
