@@ -24,7 +24,7 @@
     "multiparty": "4.2.1",
     "node-fetch": "2.6.0",
     "path": "0.12.7",
-    "pug": "2.0.4",
+    "pug": "3.0.1",
     "request": "2.88.2",
     "socket.io": "2.3.0",
     "supertest": "4.0.2",
